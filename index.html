@@ -65,8 +65,8 @@
     <figure class="gallery-content">
       <a href="#">
         <img src="img/gallery-1.jpg" alt="Галерея сайта Барбершоп">
-        <span class="gallery-button gallery-button-back">Назад</span>
-        <span class="gallery-button gallery-button-next">Вперед</span>
+        <button class="gallery-button gallery-button-back" type="button">Назад</button>
+        <button class="gallery-button gallery-button-next" type="button">Вперед</button>
       </a>
     </figure>
   </section>
@@ -121,6 +121,30 @@
   <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
     <span class="modal-close">x</span>
+  </section>
+
+  <section class="appointment">
+    <h2>Записаться</h2>
+      <p class="appointment-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
+        <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
+          <p class="appointment-item">
+            <label for="appointment-date">Дата</label>
+            <input type="text" name="date" value="" placeholder="08.10.2017">
+          </p>
+          <p class="appointment-item">
+            <label for="appointment-time">Время</label>
+            <input type="text" name="time" value="" placeholder="10:00">
+          </p>
+          <p class="appointment-item">
+            <label for="appointment-name">Ваше имя</label>
+            <input type="text" name="name" value="" placeholder="Борода">
+          </p>
+          <p class="appointment-item">
+            <label for="appointment-phone">Телефон</label>
+            <input type="tel" name="phone" value="" placeholder="+7 123 456-78-90">
+          </p>
+          <button class="button" type="submit">Отправить</button>
+        </form>
   </section>
 </body>
 </html>
