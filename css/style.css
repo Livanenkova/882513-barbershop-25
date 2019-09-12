@@ -169,8 +169,6 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
   background-position: 0 0;
 
-  background-color: #ff0000;
-
   opacity: 0.3;
 }
 
