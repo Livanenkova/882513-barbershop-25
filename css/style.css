@@ -61,10 +61,12 @@ input[type="radio"].visually-hidden {
   background-color: #000000;
 }
 
-
 .button {
-  font: inherit;
+  display: inline-block;
+  margin-right: 16px;
+  padding: 10px 30px;
 
+  font: inherit;
   text-align: center;
   color: #ffffff;
   vertical-align: middle;
@@ -78,6 +80,13 @@ input[type="radio"].visually-hidden {
 .button:focus,
 .button:active {
   background-color: #663d15;
+}
+
+.button.disabled,
+.button:disabled {
+  cursor: default;
+  opacity: 0.5;
+  background-color: #000000;
 }
 
 .main-navigation {
@@ -266,22 +275,42 @@ input[type="radio"].visually-hidden {
   color: #000000;
 
   background-color: #f8f5f2;
-  background-image: url("../img/pattern-light.jpg");
-  background-position: 0 0;
-  background-repeat: repeat;
+  background-image:
+    url("../img/line.png"),
+    url("../img/pattern-light.jpg");
+  background-position: center, 0 0;
+  background-repeat: no-repeat, repeat;
 }
 
 .index-columns h2 {
+  margin: 0;
+  margin-bottom: 25px;
+
   font-size: 30px;
   line-height: 42px;
 }
 
 .news {
   width: 380px;
+
+    background: rgba(0, 128, 0, 0.2);
+  box-shadow: 0 0 0 3px green;
 }
 
 .news-list {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+
   list-style: none;
+}
+
+.news-item {
+  margin-bottom: 25px;
+}
+
+.news-item p {
+  margin: 0;
 }
 
 .news-item time {
