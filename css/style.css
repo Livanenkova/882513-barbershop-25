@@ -935,3 +935,7 @@ input[type="radio"].visually-hidden {
 
   font-size: 48px;
 }
+
+.product-photo-preview-margin{
+  margin:0 20px;
+}
