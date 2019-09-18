@@ -936,6 +936,75 @@ input[type="radio"].visually-hidden {
   font-size: 48px;
 }
 
+
+.block {
+    text-align: center;  /* выравнивание заголовка по центру обертки */
+    width: 100%;          /* ширина обертки. На самом деле для фиксированной верстки можно использовать и px, но лучше сразу адаптировать под разные устройства, т.к. это, что называется, тренди :-) */
+    margin: 0 auto;      /* выравнивание обертки по центру документа */
+    overflow: hidden;    /* прячем линии за границами обертки, чтобы в случае изменения ширины экрана линии не выходили за ее пределы */
+}
+
+.block h2 {
+     position: relative;
+}
+
+.block h2:before {
+    display: block;                  /* делаем псевдоэлемент блоком для последующего работы с ним, как с простым div'ом */
+    width:160px;                    /* устанавливаем ширину линию. Можно использовать произвольную ширину */
+    content: '';                     /* позволяет вставлять генерируемое содержание в текст страницы, которое первоначально в тексте отсутствует */
+    position: absolute;              /* абсолютное позиционирование для управления линиями */
+    border-bottom: 2px solid #000;   /* бордер псевдо дива, т.е. сама линия */
+    top:50%;                         /* позиционирование по вертикали */
+    right: 1px;                    /* позиционирование по горизонтали */
+}
+
+/* аналогичные стили для второго псевдоэлемента */
+
+.block h2:after {
+    display: block;
+    width:160px;
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid #000;
+    top:50%;
+    left: 1px;
+}
+
 .product-photo-preview-margin{
   margin:0 20px;
 }
+
+.price-breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+
+  list-style: none;
+}
+
+.price-breadcrumbs li {
+  position: relative;
+
+  margin-right: 42px;
+}
+
+.price-breadcrumbs li:last-child {
+  margin-right: 0;
+}
+
+.price-breadcrumbs li::after {
+  content: "";
+
+  position: absolute;
+  top: 7px;
+  right: -25px;
+
+  width: 8px;
+  height: 8px;
+
+  background-color: #000000;
+
+  transform: rotate(45deg);
