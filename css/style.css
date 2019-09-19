@@ -1020,6 +1020,7 @@ input[type="radio"].visually-hidden {
 .product-price{
   width: 460px;
 }
+
 .price-content-wrap{
       display: flex;
     justify-content: space-between;
@@ -1027,9 +1028,13 @@ input[type="radio"].visually-hidden {
 
 .product-price-table{
   border-collapse: collapse;
-  width: 300px;
+  width: 100%;
 }
 
+/*table
+{
+  width: 100%;
+}*/
 td {
   padding: 3px;
   border: 3px solid black;
@@ -1037,4 +1042,12 @@ td {
 th {
   padding: 3px;
   border: 3px solid black;
+}
+
+.advantages_wrap{
+      display: flex;
+}
+
+.advantages{
+  font-size: 14px;
 }
