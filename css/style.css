@@ -1031,10 +1031,6 @@ input[type="radio"].visually-hidden {
   width: 100%;
 }
 
-/*table
-{
-  width: 100%;
-}*/
 td {
   padding: 3px;
   border: 3px solid black;
@@ -1045,7 +1041,7 @@ th {
 }
 
 .advantages_wrap{
-      display: flex;
+  display: flex;
 }
 
 .advantages{
