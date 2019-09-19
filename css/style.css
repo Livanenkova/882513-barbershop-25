@@ -1008,3 +1008,7 @@ input[type="radio"].visually-hidden {
   background-color: #000000;
 
   transform: rotate(45deg);
+}
+.product-info span{
+  font-size: 15px;
+}
