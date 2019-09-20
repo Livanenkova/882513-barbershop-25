@@ -1036,20 +1036,20 @@ input[type="radio"].visually-hidden {
 }
 
 td {
-  width: 230px;
+  width: 240px;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 22px;
   text-align: center;
   border: 2px solid #000000;
 }
 th {
-  width: 230px;
+  width: 210px;
   padding-top: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
   padding-left: 17px;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 22px;
   text-align: left;
   border: 2px solid #000000;
 }
@@ -1065,4 +1065,12 @@ th {
 .product-info-item {
   margin-bottom: 17px;
   padding-left: 20px;
+}
+.advantages-title{
+  margin: 0;
+    font-size: 24px;
+}
+
+.advantages{
+  margin-top: 36px;
 }
