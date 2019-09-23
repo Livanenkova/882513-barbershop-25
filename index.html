@@ -11,7 +11,7 @@
 <header class="main-header">
   <nav class="main-navigation">
     <a class="main-header-logo">
-      <img src="img/index-logo.svg" width="368" height="153" alt="Логотип барбершопа «Бородинский»">
+      <img src="img/index-logo.png" width="368" height="24" alt="Логотип барбершопа «Бородинский»">
     </a>
     <div class="main-navigation-wrapper">
       <div class="container">
@@ -208,22 +208,44 @@
   </section>
 
 <script>
-  var link = document.querySelector(".login-link");
+ var link = document.querySelector(".login-link");
 
   var popup = document.querySelector(".modal-login");
   var close = popup.querySelector(".modal-close");
 
+  var form = popup.querySelector("form");
   var login = popup.querySelector("[name=login]");
+  var password = popup.querySelector("[name=password]");
 
+  var isStorageSupport = true;
+  var storage = "";
+
+  try {
+    storage = localStorage.getItem("login");
+  } catch (err) {
+    isStorageSupport = false;
+  }
 
   link.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.add("modal-show");
+    login.focus();
   });
 
   close.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.remove("modal-show");
+  });
+
+  form.addEventListener("submit", function (evt) {
+    if (!login.value || !password.value) {
+      evt.preventDefault();
+      console.log("Нужно ввести логин и пароль");
+    } else {
+        if (isStorageSupport) {
+        localStorage.setItem("login", login.value);
+      }
+    }
   });
 </script>
 
