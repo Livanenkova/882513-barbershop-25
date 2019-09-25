@@ -1296,7 +1296,6 @@ th {
   top: 50%;
   left: 50%;
 
-  display: none;
   width: 766px;
   height: 561px;
   margin-top: -280px;
@@ -1306,6 +1305,17 @@ th {
 }
 
 .modal-map p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
   margin: 0;
 }
 
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
+}
